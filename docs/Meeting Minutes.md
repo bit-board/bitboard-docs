@@ -6,12 +6,12 @@ This meeting minutes in this file are the summeries of meeting notes from member
 ## 1. Briefing with Jonny  
 **Date:** 30 Apr 2019 <br>
 **Venue:** Room 610b  
-**Attendance:** All team members except Thomas, Johny from micro:bit  
+**Attendance:** All team members except Thomas, Jonathan Austin from micro:bit  
 
 **Discussion:**
 * Team members self-introduction
 #### From Jonny's briefing
-* 3 useful resources from micro:bit suggested by Jonny:
+* 3 useful resources from micro:bit suggested by the client:
     * tech.microbit.org - documentations for previous work done;
     * microbit.org - accessories guide;
     * github, microbit-dal - the starting point for this project;
@@ -27,7 +27,7 @@ This meeting minutes in this file are the summeries of meeting notes from member
     
 **Action Plans:**
 * James will get one micro:bit from Amazon
-* Jonny would send more micro:bits for the team to use and test
+* The client would send more micro:bits for the team to use and test
 * Research topics:
     * MakeCode Extensions
     * BLE library / profile
@@ -53,13 +53,13 @@ This meeting minutes in this file are the summeries of meeting notes from member
 
 **Proposed next team meeting:** Before the end of week 1
 
-## 3. 2nd meeting with Jonny from micro:bit
+## 3. 2nd meeting with the client from micro:bit
 **Date:** 14 May 2019  
 **Venue:** Room 610b  
-**Attendance:** All team members and Jonny 
+**Attendance:** All team members and Mr. Jonathan Austin 
 
 **Discussion:**
-* Possible concepts for keyboard: musical keyboard, game controller, fortnite machine, Makey-Makey, joystick, cardboard edge connector, draw and place, copper tape, graphite, ink, papier machine
+* Possible concepts for keyboard: musical keyboard, game controller, Fortnite machine, Makey-Makey, joystick, cardboard edge connector, draw and place, copper tape, graphite, ink, papier machine
 * MakeCode Extension
 * HOGP (HID over GATT protocol) 
 * Clarified suggested cost range: similar to micro:bit itself, around 15 US dollars
