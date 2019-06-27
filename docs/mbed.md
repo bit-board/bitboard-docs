@@ -119,6 +119,7 @@ The BLE object needs to be initialised after being constructed, the callback fun
     ble.gap().onConnection(onConnect);
 ```
 For the micro:bit to advertise itself as a BLE HID Keyboard, the BLE object must contain the suitable security properties, device information and battery service information.
+
 [initializeSecurity(ble)](#inside-initializesecurity) adds security properties required 
 
 KeyboardService(ble) adds a keyboard service to the GATT table inside the BLE object (BLE_HID/KeyboardService.h)
