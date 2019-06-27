@@ -170,6 +170,7 @@
             <li><a href="#within-main">Within main</a></li>
             <li><a href="#inside-initializesecurity">Inside initializeSecurity()</a></li>
             <li><a href="#inside-initializehogp">Inside initializeHOGP()</a></li>
+            <li><a href="#the-above-is-then-implemented-as-the-class-bitboard">The above is then implemented as the class bitboard</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
@@ -289,10 +290,10 @@ void touch_control(){
     ble.gap().onConnection(onConnect);
 </code></pre>
 
-<p>For the micro:bit to advertise itself as a BLE HID Keyboard, the BLE object must contain the suitable security properties, device information and battery service information.
-* <a href="#inside-initializesecurity">initializeSecurity(ble)</a> adds security properties required 
-* KeyboardService(ble) adds a keyboard service to the GATT table inside the BLE object (BLE_HID/KeyboardService.h)
-* <a href="#inside-initializehogp">initializeHOGP(ble)</a> adds more information to the BLE object, such as a pnp id and battery service information required for HOGP (HID Over Gatt Protocol)  </p>
+<p>For the micro:bit to advertise itself as a BLE HID Keyboard, the BLE object must contain the suitable security properties, device information and battery service information.</p>
+<p><a href="#inside-initializesecurity">initializeSecurity(ble)</a> adds security properties required </p>
+<p>KeyboardService(ble) adds a keyboard service to the GATT table inside the BLE object (BLE_HID/KeyboardService.h)</p>
+<p><a href="#inside-initializehogp">initializeHOGP(ble)</a> adds more information to the BLE object, such as a pnp id and battery service information required for HOGP (HID Over Gatt Protocol)  </p>
 <pre><code class="c++">    initializeSecurity(ble);
 
     KeyboardService kbdService(ble);
@@ -325,10 +326,10 @@ void touch_control(){
 </code></pre>
 
 <h3 id="inside-initializesecurity">Inside initializeSecurity()</h3>
-<p>It is important to initialize the security properties for the BLE object, this is done to prevent the security issues during the pairing process, these security issues include:
-* Passive eavesdropping
-* MITM (man-in-the-middle) attacks 
-* Identity tracking.</p>
+<p>It is important to initialize the security properties for the BLE object, this is done to prevent the security issues during the pairing process, these security issues include:</p>
+<p>Passive eavesdropping</p>
+<p>MITM (man-in-the-middle) attacks </p>
+<p>Identity tracking.</p>
 <pre><code class="c++">void initializeSecurity(BLE &amp;ble)
 {
     bool enableBonding = true;
@@ -369,7 +370,9 @@ void touch_control(){
     // 30ms to 50ms is recommended (5.1.2)
     ble.gap().setAdvertisingInterval(50);
 }
-</code></pre></div>
+</code></pre>
+
+<h3 id="the-above-is-then-implemented-as-the-class-bitboard">The above is then implemented as the class <a href="https://github.com/bit-board/bitboard/tree/master/mbed/ble_hid_kbd_class_version">bitboard</a></h3></div>
         </div>
 
         <footer class="col-md-12">
