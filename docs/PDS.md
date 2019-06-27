@@ -48,7 +48,7 @@ For the outer layers of bit:board, a laser cutter is needed. If the cost of prod
 ### Customer
 Target audience of bit:board is children aged 11-12. Parents are also potential customers as bit:board encourages interactions between parents and children, teacher and students.
 
-#### Size
+### Size
 Should be smaller or equal to A4 size (i.e. 21.0 x 29.7cm) to be able to fit inside a typical school bag
 
 ### Weight
