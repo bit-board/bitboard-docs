@@ -23,8 +23,8 @@ No. | Date | Group Progress
 17 | 9 Jun | Finalised and submitted poster for printing
 18 | 10 Jun | - Created GUI for demo examples <br> - Programmed different key sets for each example
 19 | 11 Jun | - Assembled the prototype <br> - Tested 3 demo examples on the prototype
-20 | 12 Jun | - Prepared for hackabooth <br> - Implemented MakeCode block extension
-21 | 13 Jun | Presented prototype at hackabooth
+20 | 12 Jun | - Prepared for hackbooth <br> - Implemented MakeCode block extension
+21 | 13 Jun | Presented prototype at hackbooth
 22 | 18 Jun | Allocated different roles for project documentation
 23 | 23 Jun | Created a GitHub Page for documentation
 24 | 27 Jun | Finalised and submitted documentation

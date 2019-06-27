@@ -1,6 +1,6 @@
 # Meeting Minutes  
 
-This meeting minutes in this file are the summeries of meeting notes from members, for major meetings usually involve participants outside the team. This team had regular and less formal meetings throughout the project. Please see the seperate file for the record. Compiling the bits and pieces from notebooks together has been a good review of the journey this team has gone through.
+This meeting minutes in this file are the summaries of meeting notes from members, for major meetings usually involve participants outside the team. This team had regular and less formal meetings throughout the project. Please see the separate file for the record. Compiling the bits and pieces from notebooks together has been a good review of the journey this team has gone through.
 
 
 ## 1. Briefing with Jonny  
@@ -21,7 +21,7 @@ This meeting minutes in this file are the summeries of meeting notes from member
     * User-friendly
     * Open-ended nature
 * Production tools:
-    * arm mbed (online editor)
+    * ARM Mbed (online editor)
     * MakeCode environment
     * Typescript  
     
@@ -59,7 +59,7 @@ This meeting minutes in this file are the summeries of meeting notes from member
 **Attendance:** All team members and Mr. Jonathan Austin 
 
 **Discussion:**
-* Possible concepts for keyboard: musical keyboard, game controller, Fortnite machine, Makey-Makey, joystick, cardboard edge connector, draw and place, copper tape, graphite, ink, papier machine
+* Possible concepts for keyboard: musical keyboard, game controller, Fortnite game, Makey-Makey, joystick, cardboard edge connector, draw and place, copper tape, graphite, ink, papier machine
 * MakeCode Extension
 * HOGP (HID over GATT protocol) 
 * Clarified suggested cost range: similar to micro:bit itself, around 15 US dollars
@@ -131,7 +131,7 @@ This meeting minutes in this file are the summeries of meeting notes from member
     
 **Action Plans:**
 * Start working on the hardware prototype
-* Develop an mbed code for input signals and related controls for the proposed examples.
+* Develop an Mbed code for input signals and related controls for the proposed examples.
 
 ## 7. Meeting on Leaflet and Poster 
 **Date:** 6 June 2019    
@@ -158,7 +158,7 @@ This meeting minutes in this file are the summeries of meeting notes from member
 **Discussion**
 * What should be included in our documentation
 * Job division among team members
-* Use the github platform and mark down files for the documentation
+* Use the GitHub platform and mark down files for the documentation
 
 **Action Plans:**
 * Start documentation work
@@ -175,7 +175,7 @@ This meeting minutes in this file are the summeries of meeting notes from member
 * Publish the project on micro:bit's platform
 * Documentation details
 * Future works in summer
-* Potential to talk with accesory producer
+* Potential to talk with accessory producer
 
 **Action Plans**
 * Continue working on merging BLE with DAL

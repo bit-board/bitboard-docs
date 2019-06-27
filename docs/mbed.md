@@ -1,4 +1,4 @@
-# Implementattion of BLE HID Keyboard service in Mbed
+# Implementation of BLE HID Keyboard service in Mbed
 
 This implementation requires the following library
 
@@ -118,10 +118,10 @@ The BLE object needs to be initialised after being constructed, the callback fun
     ble.gap().onDisconnection(onDisconnect);
     ble.gap().onConnection(onConnect);
 ```
-For the micro:bit to advertise itself as a BLE HID Keyboard, the ble object must contain the suitable security properties, device information and battery service information.
-- [initializeSecurity(ble)](#inside-initializesecurity) adds security properties required 
-- KeyboardService(ble) adds a keyboard service to the GATT table inside the BLE object (BLE_HID/KeyboardService.h)
-- [initializeHOGP(ble)](#inside-initializehogp) adds more information to the BLE object, such as a pnp id and battery service information required for HOGP (HID Over Gatt Protocol)  
+For the micro:bit to advertise itself as a BLE HID Keyboard, the BLE object must contain the suitable security properties, device information and battery service information.
+* [initializeSecurity(ble)](#inside-initializesecurity) adds security properties required 
+* KeyboardService(ble) adds a keyboard service to the GATT table inside the BLE object (BLE_HID/KeyboardService.h)
+* [initializeHOGP(ble)](#inside-initializehogp) adds more information to the BLE object, such as a pnp id and battery service information required for HOGP (HID Over Gatt Protocol)  
 ```c++
     initializeSecurity(ble);
  
@@ -156,9 +156,9 @@ while (true) {
 
 ### Inside initializeSecurity()
 It is important to initialize the security properties for the BLE object, this is done to prevent the security issues during the pairing process, these security issues include:
-- Passive eavesdropping
-- MITM (man-in-the-middle) attacks 
-- Identity tracking.
+* Passive eavesdropping
+* MITM (man-in-the-middle) attacks 
+* Identity tracking.
 ```c++
 void initializeSecurity(BLE &ble)
 {

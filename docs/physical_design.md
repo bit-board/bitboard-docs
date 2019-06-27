@@ -6,11 +6,11 @@ In order to keep the prototype as environmental-friendly as possible, the main m
 ## Dimensions
 The ideal size of the product should be **small** enough for the user to keep it inside a **school bag**.
 
-The file used for laser cutting and the dimensions for all the parts can be found here: [https://github.com/t-tht/bitboard-docs/blob/master/bitboard_lasercut.svg](https://github.com/t-tht/bitboard-docs/blob/master/bitboard_lasercut.svg)
+The file used for laser cutting and the dimensions for all the parts can be found here: [https://github.com/bit-board/bitboard/blob/master/code/bitboard_lasercut.svg](https://github.com/bit-board/bitboard/blob/master/code/bitboard_lasercut.svg)
 
 ### Wooden Case
 
-[![Image](https://github.com/t-tht/bitboard-docs/raw/master/Images/bitboard_dimensions1.png "Panels")](https://github.com/t-tht/bitboard-docs/raw/master/Images/bitboard_dimensions1.png)
+[![Image](https://github.com/bit-board/bitboard-docs/raw/master/images/bitboard_dimensions1.png)](https://github.com/bit-board/bitboard-docs/raw/master/images/bitboard_dimensions1.png)
 
 Panel | Dimension (mm x mm)
 --- | ---
@@ -26,7 +26,7 @@ Extended Back (EBP) | 71 x 18
 Cushion (C) | 210 x 40
 
 ### Top Cover Cutouts
-[![Image2](https://github.com/t-tht/bitboard-docs/raw/master/Images/bitboard_dimensions2.png "Base & Cover")](https://github.com/t-tht/bitboard-docs/raw/master/Images/bitboard_dimensions2.png)
+[![Image2](https://github.com/bit-board/bitboard-docs/raw/master/images/bitboard_dimensions2.png)](https://github.com/bit-board/bitboard-docs/raw/master/images/bitboard_dimensions2.png)
 
 Cutout | Dimension (mm x mm) | Diameter (mm)
 --- | --- | ---
