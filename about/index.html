@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Meeting Minutes - bit:board</title>
+        <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/purebasic.min.css">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <script src="../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="..">bit:board</a>
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Abstract <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../problem_statement/">Problem Statement</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Design <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../concept_generation/">Concept Generation</a>
+</li>
+                                    
+<li >
+    <a href="../concept_selection/">Concept Selection</a>
+</li>
+                                    
+<li >
+    <a href="../PDS/">Product Design Specification</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Prototype <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../physical_design/">Physical Design</a>
+</li>
+                                    
+<li >
+    <a href="../circuit_diagram/">Circuit Diagram</a>
+</li>
+                                    
+<li >
+    <a href="../test_verification/">Test Verification</a>
+</li>
+                                    
+<li >
+    <a href="../mbed/">mbed Prototype</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Production <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../printed_circuit_board/">Printed Circuit Board (PCB)</a>
+</li>
+                                    
+<li >
+    <a href="../bill_of_material/">Bill of Material</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Project Administration <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../ethical/">Ethical Consequences / Sustainability</a>
+</li>
+                                    
+<li >
+    <a href="../Meeting Minutes/">Meeting Minutes</a>
+</li>
+                                    
+<li >
+    <a href="../contact/">Contact the Team</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Gallery <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../gallery/">Gallery</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#meeting-minutes">Meeting Minutes</a></li>
+            <li><a href="#1-briefing-with-jonny">1, Briefing with Jonny</a></li>
+            <li><a href="#2-initial-concept-brainstorm">2, Initial Concept Brainstorm</a></li>
+            <li><a href="#3-2nd-meeting-with-jonny-from-microbit">3, 2nd meeting with Jonny from micro:bit</a></li>
+            <li><a href="#4-team-workshop">4, Team Workshop</a></li>
+            <li><a href="#5-2nd-meeting-with-academic-supervisor">5, 2nd meeting with academic supervisor</a></li>
+            <li><a href="#6-team-workshop">6, Team Workshop</a></li>
+            <li><a href="#7-leaflet-and-posters">7, Leaflet and Posters</a></li>
+            <li><a href="#8-documentation-discussion">8, Documentation Discussion</a></li>
+            <li><a href="#9-3rd-meeting-with-jonny">9, 3rd meeting with Jonny</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h1 id="meeting-minutes">Meeting Minutes</h1>
+<p>This meeting minutes in this file are the summeries of meeting notes from members, for major meetings usually involve participants outside the team. This team had regular and less formal meetings throughout the project. Please see the seperate file for the record. Compiling the bits and pieces from notebooks together has been a good review of the journey this team has gone through.</p>
+<h2 id="1-briefing-with-jonny">1, Briefing with Jonny</h2>
+<p>30 Apr 2019, 610b<br />
+all team members excpet Thomas, Johny from micro:bit<br />
+- team member self-introduction</p>
+<h3 id="from-jonnys-briefing">From Jonny's briefing</h3>
+<ul>
+<li>3 sources of knowledge from micro:bit to this project:<ul>
+<li>tech.microbit.org; documentation for previous work done;</li>
+<li>microbit.org; accessory guide;</li>
+<li>github, microbit-dal; the starting point for this project;</li>
+</ul>
+</li>
+<li>explanation of requirements:<ul>
+<li>ble keyboard</li>
+<li>accessory</li>
+<li>for kids</li>
+<li>open end nature</li>
+</ul>
+</li>
+<li>production tools:<ul>
+<li>arm mbed (online editor)</li>
+<li>MakeCode environment</li>
+<li>typescript  </li>
+</ul>
+</li>
+</ul>
+<p><strong>action points:</strong>
+- James will get one micro:bit from Amazon
+- Jonny would send more micro:bits for the team to use
+- research topics:
+    - MakeCode Extensions
+    - BLE library / profile
+    - HID over GATT protocal
+    - megabit from last year
+    - existing accessories like bit:commander
+- summeries reasearch outcome and questions before next Tuesday
+- propose meeting with academic supervisor</p>
+<ul>
+<li>proposed next team meeting: before the end of week 1</li>
+</ul>
+<h2 id="2-initial-concept-brainstorm">2, Initial Concept Brainstorm</h2>
+<p>2 May 2019, all team members
+- ideas discussed:
+    - feature phone
+    - mouse like keyboard
+    - PS4 + keyboard
+    - music controller, piano like keyboard
+- Research outcome has been shared among members.
+- Questions about this project and requirements have been gathered for later meeting with Jonny and academic supervisor. <br />
+- talk with Jonny again as soon </p>
+<h2 id="3-2nd-meeting-with-jonny-from-microbit">3, 2nd meeting with Jonny from micro:bit</h2>
+<p>14 May 2019, all team members and Jonny  </p>
+<p><strong>discussion:</strong>
+- possible concepts for keyboard: musical keyboard, game controller, fortnite machine, Makey-Makey, joystick, cardboard edge connector, draw and place, copper tape, graphite, ink, papier machine
+- MakeCode Extension
+- HOGP (HID over GATT protocol) 
+- clarified suggest cost range: similar to micro:bit itself, around 10 US dollar;
+- clarified restrictions on power of device
+- additional production design guideline: Cheap and useful, fit onto a student desk/into a bag</p>
+<p><strong>action points:</strong>
+- research existing accessories and similar products on the market
+- keep brainstorming 
+- verify BLE functionality of micro:bit
+- meet again early next week</p>
+<h2 id="4-team-workshop">4, Team Workshop</h2>
+<p>21 May 2019, all team members</p>
+<p><strong>discussion</strong>
+- possible inputs:
+    - joystick?s?
+    - dial
+    - LED indicator
+    - button / touch sensors as keys
+- case / shape: inspiration from nintendo
+- drawings of concept: triangle:bit</p>
+<p><strong>action points</strong>
+- research suitable components for suggested inputs
+- try to realize BLE keyboard service based on micro:bit_presentor
+- seek advice from academic supervisor</p>
+<h2 id="5-2nd-meeting-with-academic-supervisor">5, 2nd meeting with academic supervisor</h2>
+<p>23 May 2019, all team members</p>
+<p><strong>discussion</strong>
+- triangle:bit and modular design
+- physical connection
+    - difficulties
+    - possible solutions
+- electronic connections
+    - wire / contacts / connector
+    - spin contact pins
+    - buses / SPI or I2C network
+- feasibility of graphite tracks and copper tape
+- introduce a drawing ground</p>
+<p><strong>action points</strong>
+- rethink the concept of triangle:bit
+- research suitable electronic connector
+- verify the conductivity of graphite pencil and copper tape
+- verify wires suitable for kids, presumably cable with crocodile clip</p>
+<h2 id="6-team-workshop">6, Team Workshop</h2>
+<p>28 May 2019, all team members</p>
+<p><strong>discussion</strong>
+- possible example/tutorial for the accessory: 
+    - quiz, 
+    - battleship, 
+    - blocking, 
+    - potentiometer, 
+    - pictogram, 
+    - maze, 
+    - wire loop, 
+    - comic box, 
+    - pin ball, 
+    - crossy road</p>
+<p><strong>action points</strong>
+- start the work of hardware prototype
+- develop mbed code for input signals and related controls for the proposed examples.</p>
+<h2 id="7-leaflet-and-posters">7, Leaflet and Posters</h2>
+<p>6 Jun 2019, all team members</p>
+<p><strong>discussion:</strong>
+- minimum font for visibility from a distance
+- bubble for content on leaflet
+- pictures / images
+- envelope, printing, marker, crop
+- what sections should be included into poster and key points for each section
+- who is responsible to which section</p>
+<p><strong>action points</strong>
+- review leaflet content and design
+- write contents for poster</p>
+<h2 id="8-documentation-discussion">8, Documentation Discussion</h2>
+<p>18 Jun 2019, all team members</p>
+<p><strong>Discussion</strong>
+- what should be included in our documentation
+- job division
+- github platform and mark down files</p>
+<p><strong>action points</strong>
+- start documentation work
+- arrange meeting with Jonny on Thursday</p>
+<h2 id="9-3rd-meeting-with-jonny">9, 3rd meeting with Jonny</h2>
+<p>20 Jun 2019, all team members except Aina</p>
+<p><strong>Discussion</strong>
+- issues encountered when merging BLE with DAL
+- YOTTA and other production tool for BLE function development and debug
+- publish this project on micro:bit's platform
+- documentation details
+- future works in summer
+- potential to talk with accesory producer</p>
+<p><strong>action points</strong>
+- keep working on merging BLE with DAL
+- keep working on documentation</p></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "..",
+                shortcuts = {"search": 83, "next": 78, "help": 191, "previous": 80};
+        </script>
+        <script src="../js/base.js" defer></script>
+        <script src="../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

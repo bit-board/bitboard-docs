@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Product Design Specification - bit:board</title>
+        <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/purebasic.min.css">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <script src="../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="..">bit:board</a>
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Abstract <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../problem_statement/">Problem Statement</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Design <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../concept_generation/">Concept Generation</a>
+</li>
+                                    
+<li >
+    <a href="../concept_selection/">Concept Selection</a>
+</li>
+                                    
+<li class="active">
+    <a href="./">Product Design Specification</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Prototype <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../physical_design/">Physical Design</a>
+</li>
+                                    
+<li >
+    <a href="../circuit_diagram/">Circuit Diagram</a>
+</li>
+                                    
+<li >
+    <a href="../test_verification/">Test Verification</a>
+</li>
+                                    
+<li >
+    <a href="../mbed/">mbed Prototype</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Production <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../printed_circuit_board/">Printed Circuit Board (PCB)</a>
+</li>
+                                    
+<li >
+    <a href="../bill_of_material/">Bill of Material</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Project Administration <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../ethical/">Ethical Consequences / Sustainability</a>
+</li>
+                                    
+<li >
+    <a href="../Meeting Minutes/">Meeting Minutes</a>
+</li>
+                                    
+<li >
+    <a href="../contact/">Contact the Team</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Gallery <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../gallery/">Gallery</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li >
+                                <a rel="next" href="../concept_selection/">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li >
+                                <a rel="prev" href="../physical_design/">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#product-design-specification-pds">Product Design Specification (PDS)</a></li>
+            <li><a href="#performance">Performance</a></li>
+            <li><a href="#environment">Environment</a></li>
+            <li><a href="#life-in-service">Life in Service</a></li>
+            <li><a href="#maintenance">Maintenance</a></li>
+            <li><a href="#target-product-cost">Target Product Cost</a></li>
+            <li><a href="#competition">Competition</a></li>
+            <li><a href="#shipping">Shipping</a></li>
+            <li><a href="#packaging">Packaging</a></li>
+            <li><a href="#quantity">Quantity</a></li>
+            <li><a href="#manufacturing-facility">Manufacturing Facility</a></li>
+            <li><a href="#customer">Customer</a></li>
+            <li><a href="#size">Size</a></li>
+            <li><a href="#weight">Weight</a></li>
+            <li><a href="#materials">Materials</a></li>
+            <li><a href="#product-life-span">Product Life Span</a></li>
+            <li><a href="#aesthetics-appearance-and-finish">Aesthetics, Appearance and Finish</a></li>
+            <li><a href="#ergonomics">Ergonomics</a></li>
+            <li><a href="#standards-and-specification">Standards and Specification</a></li>
+            <li><a href="#quality-and-reliability">Quality and Reliability</a></li>
+            <li><a href="#shelf-lifestorage">Shelf Life(storage)</a></li>
+            <li><a href="#testing">Testing</a></li>
+            <li><a href="#processes">Processes</a></li>
+            <li><a href="#time-scale">Time Scale</a></li>
+            <li><a href="#safety">Safety</a></li>
+            <li><a href="#company-constraints">Company Constraints</a></li>
+            <li><a href="#market-constraints">Market Constraints</a></li>
+            <li><a href="#patents-literature-and-product-data">Patents, Literature and Product Data</a></li>
+            <li><a href="#legal">Legal</a></li>
+            <li><a href="#political-and-social-implications">Political and Social Implications</a></li>
+            <li><a href="#installation">Installation</a></li>
+            <li><a href="#documentation">Documentation</a></li>
+            <li><a href="#disposal">Disposal</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h1 id="product-design-specification-pds">Product Design Specification (PDS)</h1>
+<p>The PDS describes requirements that bit:board ought to meet to satisfy the problem statement.</p>
+<h4 id="performance">Performance</h4>
+<p>bit:board is expected to bring an educational impact (especially in computer science) to the user.</p>
+<p>It has to be a keyboard that includes touch sensors and utilises the Bluetooth Low Energy(BLE) functionality and</p>
+<p>As our target audience is children aged 11-12, user interface should be easy-to-use.</p>
+<h4 id="environment">Environment</h4>
+<p>During transport, storage and usage, bit:board should be able to withstand moderate impact and  normal conditions such as average humidity and temperature.</p>
+<h4 id="life-in-service">Life in Service</h4>
+<p>bit:board aims for a long life span(i.e. 2 years), working for 1-2 hours a day.</p>
+<p>Materials chosen should be robust for long usage.</p>
+<h4 id="maintenance">Maintenance</h4>
+<p>No professional maintenance required as all components would be hidden from the user for safety reason.</p>
+<p>Common maintenance includes change of batteries and cleaning of surface of touch sensors for better sensitivity.</p>
+<h4 id="target-product-cost">Target Product Cost</h4>
+<p>Aims to have the retail price to be lower than the BBC micro:bit (~£17). Hence, for mass production, PCB would be designed to include touch sensors on board to lower cost for components.</p>
+<h4 id="competition">Competition</h4>
+<p>There is no similar products in the market at the moment - no accessories so far makes use of BLE and includes a canvas as controller.</p>
+<p>There are micro:bit accessories that functions as game controllers such as :GAME ZIP64 and bit:commander.</p>
+<p>In addition, micro:bit accessory that includes touch sensors is touch:bit.</p>
+<h4 id="shipping">Shipping</h4>
+<p>bit:board is likely to be in batch production. Since it will be manufactured and distributed in the UK, local carriers can be used to send bit:boards from manufacturer to distributor. Shipping of bit:board to international users would be done by distributor.</p>
+<h4 id="packaging">Packaging</h4>
+<p>An outer housing to pack the bit:board will be required when in transportation.</p>
+<h4 id="quantity">Quantity</h4>
+<p>Generally, the production volume will be in small incremental steps. To test the water, an initial volume of 200 units will be produced. If the launch of bit:board is successful, then batch volume should be increased by 100 units at each milestone.</p>
+<h4 id="manufacturing-facility">Manufacturing Facility</h4>
+<p>For mass production, PCB is likely to be printed by an external manufacturer, meaning that manufacture of PCBs would be outsourced.</p>
+<p>For the outer layers of bit:board, a laser cutter is needed. If the cost of production for laser cutting is desirable, then it is likely to be outsourced as well.</p>
+<h4 id="customer">Customer</h4>
+<p>Target audience of bit:board is children aged 11-12. Parents are also potential customers as bit:board encourages interactions between parents and children, teacher and students.</p>
+<h4 id="size">Size</h4>
+<p>Should be smaller or equal to A4 size (i.e. 21.0 x 29.7cm) to be able to fit inside a typical school bag</p>
+<h4 id="weight">Weight</h4>
+<p>Should be lightweight to reduce the pressure on the user when carrying bit:board around. Yet, bit:board does not need to be lifted up during usage, so being weight-efficient would not be a concern.</p>
+<h4 id="materials">Materials</h4>
+<p>To reduce the impact on the environment, bit:board's outer layer would be made from wood (i.e. birch plywood 3mm).</p>
+<p>Electrical components such as 4 touch sensors, a joystick, 4 IC switches, 4 LEDs, edge connector and wires would be needed.</p>
+<p>Adhesives are also needed to put wood pieces together.</p>
+<h4 id="product-life-span">Product Life Span</h4>
+<p>bit:board would be in the market for around a year, and a new improved version would be developed in the mean time.</p>
+<h4 id="aesthetics-appearance-and-finish">Aesthetics, Appearance and Finish</h4>
+<p>Since bit:board is made from birch plywood, bit:board would make use of the natural wood pattern, smoothed out using sandpaper of 300-400 grit, finished by applying a layer of Beeswax for aesthetic.</p>
+<h4 id="ergonomics">Ergonomics</h4>
+<p>bit:board is designed to be used while sitting on a surface.</p>
+<p>There should be no sharp edges or corner and should be smooth to touch.</p>
+<p>The inputs should be placed at suitable distance from each other, so they are not too far or too near to each other.</p>
+<h4 id="standards-and-specification">Standards and Specification</h4>
+<p>If bit:board is released to the European micro:bit accessories market, then it must obtain the CE mark and the BSI Kitemark.</p>
+<h4 id="quality-and-reliability">Quality and Reliability</h4>
+<p><strong>Mean time before repair</strong>: depends on the battery life</p>
+<p><strong>Mean time before failure</strong>: since electrical wiring and components are enclosed, with the robust design of bit:board, it should be able to last as long as the life expectancy before any failure</p>
+<h4 id="shelf-lifestorage">Shelf Life(storage)</h4>
+<p>bit:board should be stored in a cool,dry place to prevent any issue rising from the electronic components</p>
+<h4 id="testing">Testing</h4>
+<p>BLE should be tested before being released to the market</p>
+<h4 id="processes">Processes</h4>
+<ul>
+<li>
+<p>Laser cutting of the wooden case</p>
+</li>
+<li>
+<p>Creation of MakeCode package</p>
+</li>
+<li>
+<p>Circuit Design</p>
+</li>
+</ul>
+<h4 id="time-scale">Time Scale</h4>
+<p>Idea generation from meeting with client - Summer term week 0-1
+Product, leaflet and poster design - Summer term week 2-6
+Hackbooth demonstration - Summer term week 7
+Documentation - Summer term week 8-9</p>
+<h4 id="safety">Safety</h4>
+<p><strong>Legal guidelines</strong>
+To make bit:board available on the market, all parameters must abide to the EU safety regulations</p>
+<p><strong>Manufacturing Hazards</strong>
+Wiring must not be exposed, and multimeter should be used to check if electrically safe</p>
+<p><strong>Operational Hazards</strong>
+Rough use and violent treatment of product should be avoided even though robustness is taken into account in product design</p>
+<h4 id="company-constraints">Company Constraints</h4>
+<p>We are limited to £500 budget.</p>
+<p>Third-party suppliers must be approved by Imperial College London.</p>
+<h4 id="market-constraints">Market Constraints</h4>
+<p>Market constraints are difficult to estimate as there is not much data on the micro:bit accessories market. Moreover, there are no similar implementation in the market, so there are no references to take from.</p>
+<h4 id="patents-literature-and-product-data">Patents, Literature and Product Data</h4>
+<p>No patents are needed</p>
+<h4 id="legal">Legal</h4>
+<p>Not Applicable</p>
+<h4 id="political-and-social-implications">Political and Social Implications</h4>
+<p>bit:board promotes science, technology, engineering and mathematics (STEM) and aims to improve the understanding in the field of computer science.</p>
+<h4 id="installation">Installation</h4>
+<p>Users are only required to replace the canvas and insert the micro:bit into the edge connector of bit:board for the operation.</p>
+<h4 id="documentation">Documentation</h4>
+<p>Documentation is made into GitHub pages for references:</p>
+<p>http://t-tht.github.io/bitboard-docs-mkdocs/</p>
+<h4 id="disposal">Disposal</h4>
+<p>As birch plywood is used for the casing, most parts of the bit:board are recyclable. However, electrical components (e.g. batteries, touch sensors and joystick) should be separated from the bit:board before disposal to reduce impact on the environment.</p></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "..",
+                shortcuts = {"search": 83, "next": 78, "help": 191, "previous": 80};
+        </script>
+        <script src="../js/base.js" defer></script>
+        <script src="../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

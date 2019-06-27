@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Problem Statement - bit:board</title>
+        <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/purebasic.min.css">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <script src="../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="..">bit:board</a>
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="dropdown active">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Abstract <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li class="active">
+    <a href="./">Problem Statement</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Design <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../concept_generation/">Concept Generation</a>
+</li>
+                                    
+<li >
+    <a href="../concept_selection/">Concept Selection</a>
+</li>
+                                    
+<li >
+    <a href="../PDS/">Product Design Specification</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Prototype <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../physical_design/">Physical Design</a>
+</li>
+                                    
+<li >
+    <a href="../circuit_diagram/">Circuit Diagram</a>
+</li>
+                                    
+<li >
+    <a href="../test_verification/">Test Verification</a>
+</li>
+                                    
+<li >
+    <a href="../mbed/">mbed Prototype</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Production <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../printed_circuit_board/">Printed Circuit Board (PCB)</a>
+</li>
+                                    
+<li >
+    <a href="../bill_of_material/">Bill of Material</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Project Administration <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../ethical/">Ethical Consequences / Sustainability</a>
+</li>
+                                    
+<li >
+    <a href="../Meeting Minutes/">Meeting Minutes</a>
+</li>
+                                    
+<li >
+    <a href="../contact/">Contact the Team</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Gallery <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../gallery/">Gallery</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="disabled">
+                                <a rel="next" >
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li >
+                                <a rel="prev" href="../concept_generation/">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#problem-statement">Problem Statement:</a></li>
+        <li class="main "><a href="#ideas">Ideas:</a></li>
+            <li><a href="#-we-want-to-create-an-environment-for-the-target-audience-to-learn-about-electronics">- We want to create an environment for the target audience to learn about electronics.</a></li>
+            <li><a href="#-create-an-environment-that-has-the-right-amount-of-complexity-for-the-target-audience">- Create an environment that has the right amount of complexity for the target audience</a></li>
+            <li><a href="#-create-a-sandbox-for-the-target-audience-to-get-their-hands-dirty-where-there-is-a-larger-diy-factor">- Create a sandbox for the target audience to "get their hands dirty", where there is a larger DIY factor.</a></li>
+            <li><a href="#-it-should-serve-a-similar-purpose-as-makecode">- It should serve a similar purpose as MakeCode</a></li>
+            <li><a href="#-should-serve-other-purposes-other-than-learning-about-programming-and-circuits">- Should serve other purposes other than learning about programming and circuits</a></li>
+            <li><a href="#-overall-product-should-give-a-positive-association-with-learning-about-electronics">- Overall, product should give a positive association with learning about electronics</a></li>
+        <li class="main "><a href="#inspiration">Inspiration</a></li>
+        <li class="main "><a href="#concerns">Concerns</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h2 id="problem-statement">Problem Statement:</h2>
+<ul>
+<li>No existing accessory on the market suitable for learning about electronics and hardware.</li>
+<li>No existing accessory on the market encapsulates unnecessary details (edge connector, breakout board, breadboards) in the learning environment for year 7 users.</li>
+<li>Soldering and making connections can prove to be difficult for younger user, especially in the target user base.</li>
+<li>No available BLE HID Keyboard service on the micro:bit.</li>
+<li>Accessories on the market does not allow user to use their creativity to form a solution.<ul>
+<li>Most of them add inputs that are connected to pins in the micro:bit using the breakout board.</li>
+</ul>
+</li>
+</ul>
+<h2 id="ideas">Ideas:</h2>
+<p>The term "Target Audience" below refers to our target group of students at around the age of 11 (Year 7).</p>
+<h4 id="-we-want-to-create-an-environment-for-the-target-audience-to-learn-about-electronics">- We want to create an environment for the target audience to learn about electronics.</h4>
+<h4 id="-create-an-environment-that-has-the-right-amount-of-complexity-for-the-target-audience">- Create an environment that has the right amount of complexity for the target audience</h4>
+<ul>
+<li>Not too difficult, such that the target audience will feel repulsive in the learning process</li>
+<li>Not too simple, such that the product will limit what the target audience can learn from it.</li>
+<li>Enough capacity for users to utilize and develop their creative problem solving skillsets.<ul>
+<li>Not everything they use is out-of-the-box, they have to create their own circuit solutions</li>
+</ul>
+</li>
+<li>Adequate amount of components provided to them out-of-the-box<ul>
+<li>joysticks, switches, dials</li>
+<li>acts as additional material</li>
+<li>off-the-shelf components are more reliable than drawn circuits, which serves as backup solutions</li>
+<li>develops an understanding of micro:bit and bit:board, despite being at their initial stage of learning about electronics and software.</li>
+</ul>
+</li>
+</ul>
+<h4 id="-create-a-sandbox-for-the-target-audience-to-get-their-hands-dirty-where-there-is-a-larger-diy-factor">- Create a sandbox for the target audience to "get their hands dirty", where there is a larger DIY factor.</h4>
+<ul>
+<li>Learn about the nature of electronic circuits<ul>
+<li>Digital signals (i.e. highs and lows, ones and zeroes)</li>
+<li>Making connections</li>
+<li>Different components ( e.g. Potentiometer, a switch )</li>
+<li>Vcc and ground</li>
+</ul>
+</li>
+<li>Allows younger audience to develop motor skills</li>
+</ul>
+<h4 id="-it-should-serve-a-similar-purpose-as-makecode">- It should serve a similar purpose as MakeCode</h4>
+<ul>
+<li>Their work should be able to be displayed in front of them clearly<ul>
+<li>Sense of achievement</li>
+<li>Easy debugging</li>
+<li>Easy sharing amongst fellow users</li>
+<li>Ideal for teachers to oversee user's work</li>
+</ul>
+</li>
+</ul>
+<h4 id="-should-serve-other-purposes-other-than-learning-about-programming-and-circuits">- Should serve other purposes other than learning about programming and circuits</h4>
+<ul>
+<li>Users can use this as a method for interactive story telling - please see 'IgIC Conductive Ink'.</li>
+<li>Users can use this product to participate in classroom activities (e.g. Kahoot Quizzes).</li>
+</ul>
+<h4 id="-overall-product-should-give-a-positive-association-with-learning-about-electronics">- Overall, product should give a positive association with learning about electronics</h4>
+<h2 id="inspiration">Inspiration</h2>
+<p><a href="https://www.youtube.com/watch?v=yo2kRItBaKw">IgIC Conductive Ink</a>
+    - This video demonstrates more on the DIY side that we want our product to achieve</p>
+<h2 id="concerns">Concerns</h2>
+<ul>
+<li>Need to tune the amount of encapsulation such that it will give a positive learning experience to the target user audience</li>
+<li>Need to create guides that teaches target user audience about electronics circuit and components (e.g. potentiometer)</li>
+<li>Need to consider the reliability of said components (i.e. pencil drawn potentiometer)</li>
+<li>Need to consider undefined behaviours by the user (e.g. connecting vcc to ground)</li>
+</ul></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "..",
+                shortcuts = {"search": 83, "next": 78, "help": 191, "previous": 80};
+        </script>
+        <script src="../js/base.js" defer></script>
+        <script src="../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

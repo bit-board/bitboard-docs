@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Test Verification - bit:board</title>
+        <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/purebasic.min.css">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <script src="../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="..">bit:board</a>
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Abstract <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../problem_statement/">Problem Statement</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Design <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../concept_generation/">Concept Generation</a>
+</li>
+                                    
+<li >
+    <a href="../concept_selection/">Concept Selection</a>
+</li>
+                                    
+<li >
+    <a href="../PDS/">Product Design Specification</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Prototype <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../physical_design/">Physical Design</a>
+</li>
+                                    
+<li >
+    <a href="../circuit_diagram/">Circuit Diagram</a>
+</li>
+                                    
+<li class="active">
+    <a href="./">Test Verification</a>
+</li>
+                                    
+<li >
+    <a href="../mbed/">mbed Prototype</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Production <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../printed_circuit_board/">Printed Circuit Board (PCB)</a>
+</li>
+                                    
+<li >
+    <a href="../bill_of_material/">Bill of Material</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Project Administration <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../ethical/">Ethical Consequences / Sustainability</a>
+</li>
+                                    
+<li >
+    <a href="../Meeting Minutes/">Meeting Minutes</a>
+</li>
+                                    
+<li >
+    <a href="../contact/">Contact the Team</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Gallery <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../gallery/">Gallery</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li >
+                                <a rel="next" href="../circuit_diagram/">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li >
+                                <a rel="prev" href="../mbed/">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#test-verification">Test &amp; Verification</a></li>
+            <li><a href="#hardware">Hardware</a></li>
+            <li><a href="#software">Software</a></li>
+            <li><a href="#hardware-software-integration">Hardware &amp; Software Integration</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h1 id="test-verification">Test &amp; Verification</h1>
+<p>To ensure that the prototype is working as intended, a few tests were conducted at different stages to identify any faults in hardware and bugs in software.</p>
+<h2 id="hardware">Hardware</h2>
+<h3 id="test-1-individual-electronic-components">Test 1: Individual electronic components</h3>
+<ul>
+<li>
+<p>Joystick<br />
+When the joystick knob was slowly moved towards the <strong>up/ right</strong> position, their corresponding output values increase until slightly below the <strong>3V</strong> applied. The output values work the other way round when the knob was moved towards the <strong>down/ left</strong> position, decreasing until close to <strong>GND</strong>.</p>
+</li>
+<li>
+<p>Touch Sensor<br />
+When a finger was <strong>placed</strong> on the touch sensor pad, the output signal went <strong>high</strong>. When <strong>removed</strong>, the signal went <strong>low</strong>.</p>
+</li>
+</ul>
+<h3 id="test-2-multiple-components-on-a-breadboard">Test 2: Multiple components on a breadboard</h3>
+<ul>
+<li>
+<p>LED, Switch &amp; Touch Sensor<br />
+When the touch pad was <strong>touched</strong>, the colour of the LED changed from <strong>red</strong> to <strong>green</strong>. When the finger was lifted off the pad, the colour changed back to <strong>red</strong>.</p>
+</li>
+<li>
+<p>Joystick &amp; Touch Sensor Circuit<br />
+When the joystick and the touch sensor circuit were used together, both outputs were still detectable since they worked <strong>independently</strong>.</p>
+</li>
+</ul>
+<h3 id="test-3-breadboard-with-microbit">Test 3: Breadboard with micro:bit</h3>
+<ul>
+<li>Joystick<br />
+The following programme was used to test the joystick with the <strong>analogue</strong> input pins.</li>
+</ul>
+<p>When the joystick knob is moved in a specific direction then returned to the middle, the red dot on the LED screen moved a step in that direction as well. The threshold values were adjusted to set the sensitivity of the joystick.</p>
+<pre><code class="javascript">let y = 0
+let x = 0
+let reading_y = 0
+let reading_x = 0
+let dot = game.createSprite(2, 2)
+basic.forever(function(){
+    reading_x = pins.analogReadPin(AnalogPin.P0)
+    reading_y = pins.analogReadPin(AnalogPin.P1)
+    if (reading_x &gt; 800){
+        x = x + 1
+    } 
+    else if (reading_x &lt; 200){
+        x = x - 1
+    } 
+    else{
+        x = x
+    }
+    if (reading_y &gt; 800){
+        y = y - 1
+    } 
+    else if (reading_y &lt; 200){
+        y = y + 1
+    } 
+    else{
+        y = y
+    }
+    dot.set(LedSpriteProperty.X, x)
+    dot.set(LedSpriteProperty.Y, y)
+    basic.pause(100)
+})
+</code></pre>
+
+<ul>
+<li>Touch Sensor<br />
+The following programme was used to test the touch sensor with the <strong>digital</strong> input pins.</li>
+</ul>
+<p>When one of the numbered touch pads were touched, the corresponding number appeared on the LED screen.</p>
+<pre><code class="javascript">basic.forever(function(){
+    if (pins.digitalReadPin(DigitalPin.P13) == 1){
+        basic.showNumber(1)
+    }
+    if (pins.digitalReadPin(DigitalPin.P14) == 1){
+        basic.showNumber(2)
+    }
+    if (pins.digitalReadPin(DigitalPin.P15) == 1){
+        basic.showNumber(3)
+    }
+    if (pins.digitalReadPin(DigitalPin.P16) == 1){
+        basic.showNumber(4)
+    }
+    if (pins.digitalReadPin(DigitalPin.P8) == 1){
+        basic.showNumber(8)
+    }
+})
+</code></pre>
+
+<ul>
+<li>Both Inputs Simultaneously<br />
+The two programmes used were combined to test whether the micro:bit was able to supply <strong>enough current</strong> for the implementation of the two inputs. Both results were able to be displayed, showing that the inputs can be used together.</li>
+</ul>
+<h3 id="test-4-electrical-conductivity">Test 4: Electrical conductivity</h3>
+<ul>
+<li>
+<p>Pencil (Graphite) Track<br />
+Graphite conducts electricity but it could not be used to replace wires because it has a very <strong>high resistance</strong>, causing a huge voltage drop from one end to the other. It was used as a <strong>potentiometer</strong> instead since different voltage readings could be obtained at different points.</p>
+</li>
+<li>
+<p>Copper Tape<br />
+Copper is a good conductor and there is no voltage drop across it. The <strong>adhesive side</strong> of the copper tape is <strong>conductive</strong> as well.</p>
+</li>
+<li>
+<p>Cable Clip<br />
+The clip is made from <strong>copper but plated with tin</strong>. The clip is able to conduct electricity despite having the coating. allowing the clip to be used not just for <strong>securing the paper canvas</strong> but also as an electrical connection point.</p>
+</li>
+</ul>
+<h2 id="software">Software</h2>
+<h3 id="test-1-custom-makecode-extension">Test 1: Custom MakeCode extension</h3>
+<p>Custom blocks that provide different keys of a keyboard were created using TypeScript and they were tested on the <a href="https://makecode.com/playground">MakeCode Playground</a> to visualise the format of the blocks.</p>
+<h3 id="test-2-custom-keyboard-services">Test 2: Custom keyboard services</h3>
+<p>Instead of just sending "string" via Bluetooth, keyboard commands such as <em>enter</em> and <em>backspace</em> were tested using the microbit_presenter mbed file.</p>
+<h2 id="hardware-software-integration">Hardware &amp; Software Integration</h2>
+<h3 id="test-1-fixed-inputs">Test 1: Fixed inputs</h3>
+<ul>
+<li>
+<p>Joystick<br />
+<strong>Thresholds</strong> for the analogue inputs were adjusted via <strong>trial and error</strong> to give the best joystick sensitivity. When the joystick knob was moved, the <strong>cursor</strong> on a word document moved in the same direction as well.</p>
+</li>
+<li>
+<p>Touch Sensor<br />
+Some keys were represented by the touch sensors and they were outputted on a <strong>laptop screen</strong> when the touch pads were touched. <strong>Continuous</strong> outputs were shown on the screen when the finger was <strong>resting</strong> on the touch pad.</p>
+</li>
+</ul>
+<h3 id="test-2-paper-canvas">Test 2: Paper canvas</h3>
+<ul>
+<li>
+<p>Pencil (Graphite) Track<br />
+Crocodile clips were used to connect one of the cable clips that corresponded to an <strong>analogue</strong> input pin to a particular position on the graphite track. Different analogue readings could be obtained at different positions on the graphite track.</p>
+</li>
+<li>
+<p>Copper Tape<br />
+Copper tape was used on the paper and the cable clips were in contact with the tape. When the copper tape was powered with 3V, the cable clip corresponding to a <strong>digital</strong> input pin could be detected, leading to a key output on the laptop screen.</p>
+</li>
+</ul>
+<h3 id="test-3-demo-examples">Test 3: Demo examples</h3>
+<ul>
+<li>
+<p>Online Game (Crossy Road)<br />
+Simple online games that only require basic keys such as the <strong>arrow keys</strong> and some other keys, like <strong>WASD</strong> and <strong>spacebar</strong>, can be played using the prototype. </p>
+</li>
+<li>
+<p>Custom Game (Wire Loop Game)<br />
+Copper tape was used to create <strong>boundaries</strong> of a track and connected to the 3V cable clip. The micro:bit will detect a <strong>high signal</strong> when the tip of the crocodile clip touches the tape. The game interface was created using <strong>Python</strong> to receive key presses from the micro:bit.</p>
+</li>
+<li>
+<p>Output Selector<br />
+Different threshold points were used to set the boundaries on the graphite track for different output modes. 4 modes were made to illustrate <strong>letters</strong>, <strong>numbers</strong>, <strong>symbols</strong> and <strong>commands</strong>. The touch pads will then correspond to the different key outputs based on the position of the crocodile clip.</p>
+</li>
+</ul></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "..",
+                shortcuts = {"search": 83, "next": 78, "help": 191, "previous": 80};
+        </script>
+        <script src="../js/base.js" defer></script>
+        <script src="../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
