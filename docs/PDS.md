@@ -4,12 +4,10 @@ The PDS describes requirements that bit:board ought to meet to satisfy the probl
 ### Performance
 bit:board is expected to bring an educational impact (especially in computer science) to the user.
 
-It has to be a keyboard that includes touch sensors and utilises the Bluetooth Low Energy(BLE) functionality and
-
-As our target audience is children aged 11-12, user interface should be easy-to-use.
+It has to be a keyboard that includes touch sensors and utilises the Bluetooth Low Energy(BLE) functionality and as our target audience is children aged 11-12, user interface should be easy-to-use.
 
 ### Environment
-During transport, storage and usage, bit:board should be able to withstand moderate impact and  normal conditions such as average humidity and temperature.
+During transport, storage and usage, bit:board should be able to withstand moderate impact and normal conditions such as average humidity and temperature.
 
 ### Life in Service
 bit:board aims for a long life span(i.e. 2 years), working for 1-2 hours a day.
@@ -25,9 +23,9 @@ Common maintenance includes change of batteries and cleaning of surface of touch
 Aims to have the retail price to be lower than the BBC micro:bit (~£17). Hence, for mass production, PCB would be designed to include touch sensors on board to lower cost for components.
 
 ### Competition
-There is no similar products in the market at the moment - no accessories so far makes use of BLE and includes a canvas as controller.
+There is no similar products in the market at the moment - no accessories so far makes use of BLE and includes a canvas as part of the controller.
 
-There are micro:bit accessories that functions as game controllers such as :GAME ZIP64 and bit:commander.
+There are micro:bit accessories that function as game controllers such as :GAME ZIP64 and bit:commander.
 
 In addition, micro:bit accessory that includes touch sensors is touch:bit.
 
