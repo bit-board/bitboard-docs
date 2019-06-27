@@ -2,7 +2,7 @@
 
 Per our client's request, the extension is not made only for bit:board, but as a general Bluetooth Low Energy (BLE) keyboard, so the extension can also be used for other projects. To use the extension, press the 'cog' at top right corner, choose 'Extensions' and enter "https://github.com/t-tht/pxt-bitboard" in the search box.
 
-![MakeCode Package for bit:board](https://raw.githubusercontent.com/t-tht/bitboard-docs/master/Images/makecodepackage.jpg)
+![MakeCode Package for bit:board](https://raw.githubusercontent.com/t-tht/bitboard-docs/master/Images/makecodepackage.JPG)
 
 ## Blocks
 All blocks send key commands from micro:bit to another Bluetooth-enabled device via BLE.
