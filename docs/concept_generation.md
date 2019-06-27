@@ -36,6 +36,6 @@ The canvas should ideally take the size of A5, and held down by clips which is h
 
 ### Change of input modes
 bit:board allows 3 input modes, and can be changed via crocodile clips:
-* Fixed inputs: allows user to make use to the fixed inputs only(i.e. joystick and 4 touch sensors)
-* Customized inputs: users can create their own inputs to micro:bit via different means of conducting material such as graphite pencils or copper tape
-* Mixed inputs: users could make use of both fixed inputs and customized inputs at the same time, depending on pin arrangement of the micro:bit
++ Fixed inputs: allows user to make use to the fixed inputs only(i.e. joystick and 4 touch sensors)
++ Customized inputs: users can create their own inputs to micro:bit via different means of conducting material such as graphite pencils or copper tape
++ Mixed inputs: users could make use of both fixed inputs and customized inputs at the same time, depending on pin arrangement of the micro:bit
