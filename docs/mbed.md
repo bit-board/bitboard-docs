@@ -202,3 +202,4 @@ void initializeHOGP(BLE &ble)
 }
 ```
 
+### The above is then implemented as the class [bitboard](https://github.com/bit-board/bitboard/tree/master/mbed/ble_hid_kbd_class_version)
