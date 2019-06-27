@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>mbed Prototype - bit:board</title>
+        <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/purebasic.min.css">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <script src="../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="..">bit:board</a>
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Abstract <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../problem_statement/">Problem Statement</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Design <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../concept_generation/">Concept Generation</a>
+</li>
+                                    
+<li >
+    <a href="../concept_selection/">Concept Selection</a>
+</li>
+                                    
+<li >
+    <a href="../PDS/">Product Design Specification</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Prototype <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../physical_design/">Physical Design</a>
+</li>
+                                    
+<li >
+    <a href="../circuit_diagram/">Circuit Diagram</a>
+</li>
+                                    
+<li >
+    <a href="../test_verification/">Test Verification</a>
+</li>
+                                    
+<li class="active">
+    <a href="./">mbed Prototype</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Production <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../printed_circuit_board/">Printed Circuit Board (PCB)</a>
+</li>
+                                    
+<li >
+    <a href="../bill_of_material/">Bill of Material</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Project Administration <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../ethical/">Ethical Consequences / Sustainability</a>
+</li>
+                                    
+<li >
+    <a href="../Meeting Minutes/">Meeting Minutes</a>
+</li>
+                                    
+<li >
+    <a href="../contact/">Contact the Team</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Gallery <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../gallery/">Gallery</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li >
+                                <a rel="next" href="../test_verification/">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li >
+                                <a rel="prev" href="../printed_circuit_board/">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#implementattion-of-ble-hid-keyboard-service-in-mbed">Implementattion of BLE HID Keyboard service in Mbed</a></li>
+            <li><a href="#within-main">Within main</a></li>
+            <li><a href="#inside-initializesecurity">Inside initializeSecurity()</a></li>
+            <li><a href="#inside-initializehogp">Inside initializeHOGP()</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h1 id="implementattion-of-ble-hid-keyboard-service-in-mbed">Implementattion of BLE HID Keyboard service in Mbed</h1>
+<p>This implementation requires the following library</p>
+<pre><code class="c++">#include &quot;mbed.h&quot;
+#include &quot;ble/BLE.h&quot;
+#include &quot;KeyboardService.h&quot;
+#include &quot;MicroBitPin.h&quot;
+#include &quot;examples_common.h&quot;
+#include &quot;MicroBit.h&quot;
+</code></pre>
+
+<p>We must first construct a BLE and KeyboardService object, and also declare some of the pins we will use on the micro:bit as inputs and outputs</p>
+<pre><code class="c++">// Construct BLE and KeyboardService object
+BLE ble;
+KeyboardService *kbdServicePtr;
+
+// pins on the micro:bit on the LED matrix
+DigitalOut col9(P0_12, 0);
+DigitalOut waiting_led(P0_13);
+DigitalOut connected_led(P0_15);
+
+// pins on the micro:bit for button A and B
+InterruptIn button1(BUTTON_A);
+InterruptIn button2(BUTTON_B);
+
+// pins for touch switch and joystick
+DigitalIn touch1(MICROBIT_PIN_P13);
+AnalogIn x_axis(MICROBIT_PIN_P0);
+AnalogIn y_axis(MICROBIT_PIN_P1);
+
+</code></pre>
+
+<p>Several functions are also defined here.
+We first define callback functions in the event of a connection, disconnection and waiting for connection.</p>
+<pre><code class="c++">static void onDisconnect(const Gap::DisconnectionCallbackParams_t *params)
+{
+    HID_DEBUG(&quot;disconnected\r\n&quot;);
+    connected_led = 0;
+
+    ble.gap().startAdvertising(); // restart advertising
+}
+
+static void onConnect(const Gap::ConnectionCallbackParams_t *params)
+{
+    HID_DEBUG(&quot;connected\r\n&quot;);
+    waiting_led = false;
+}
+
+static void waiting() {
+    if (!kbdServicePtr-&gt;isConnected())
+        waiting_led = !waiting_led;
+    else
+        connected_led = !connected_led;
+}
+
+</code></pre>
+
+<pre><code class="c++">void send_string(const char * c) {
+    if (!kbdServicePtr)
+        return;
+
+    if (!kbdServicePtr-&gt;isConnected()) {
+        HID_DEBUG(&quot;we haven't connected yet...&quot;);
+    } else {
+        int len = strlen(c);
+        kbdServicePtr-&gt;printf(c);
+        HID_DEBUG(&quot;sending %d chars\r\n&quot;, len);
+    }
+}
+
+</code></pre>
+
+<p>We define some functions for joystick and touch switch inputs</p>
+<pre><code class="c++">void JoystickControl(){
+    float x,y;
+
+    // threshold values for the joystick to convert analogue input to digital
+
+    x = x_axis.read();
+    if (x &lt; 0.05f) send_left();
+    if (x &gt; 0.95f) send_right();
+
+    y = y_axis.read();
+    if (y &lt; 0.05f) send_down();
+    if (y &gt; 0.95f) send_up();
+
+    wait(0.05);
+}
+
+void touch_control(){
+    if (touch1 == 1) send_space();
+    wait(0.05);
+}
+</code></pre>
+
+<h3 id="within-main">Within main</h3>
+<p>A ticker object is created to call waiting() in every certain amount of time, in this case, we will choose 1 second.</p>
+<pre><code class="c++">    Ticker heartbeat;
+
+    // call function send_one and send_zero if button A and B is pressed on the rising edge
+    button1.rise(send_one);
+    button2.rise(send_zero);
+
+    // call waiting every 1 second using the ticker object
+    heartbeat.attach(waiting, 1);
+</code></pre>
+
+<p>The BLE object needs to be initialised after being constructed, the callback function onConnect and onDisconnect is also 'attached' in the event of a connect and disconnect sent from the GAP service.</p>
+<pre><code class="c++">// initialise ble object
+    ble.init();
+
+    // attach callback functions on the event of connection and disconnection
+    ble.gap().onDisconnection(onDisconnect);
+    ble.gap().onConnection(onConnect);
+</code></pre>
+
+<p>For the micro:bit to advertise itself as a BLE HID Keyboard, the ble object must contain the suitable security properties, device information and battery service information.
+- <a href="#inside-initializesecurity">initializeSecurity(ble)</a> adds security properties required 
+- KeyboardService(ble) adds a keyboard service to the GATT table inside the BLE object (BLE_HID/KeyboardService.h)
+- <a href="#inside-initializehogp">initializeHOGP(ble)</a> adds more information to the BLE object, such as a pnp id and battery service information required for HOGP (HID Over Gatt Protocol)  </p>
+<pre><code class="c++">    initializeSecurity(ble);
+
+    KeyboardService kbdService(ble);
+    kbdServicePtr = &amp;kbdService;
+
+    initializeHOGP(ble);
+</code></pre>
+
+<p>GAP handles device discovery, link establishment, link termination and more. The GAP service is then used to advertise the micro:bit as a BLE HID Keyboard. </p>
+<pre><code class="c++">// setting up gap service
+    ble.gap().accumulateAdvertisingPayload(GapAdvertisingData::KEYBOARD);
+    ble.gap().accumulateAdvertisingPayload(GapAdvertisingData::COMPLETE_LOCAL_NAME,
+                                           (uint8_t *)DEVICE_NAME, sizeof(DEVICE_NAME));
+    ble.gap().accumulateAdvertisingPayload(GapAdvertisingData::SHORTENED_LOCAL_NAME,
+                                           (uint8_t *)SHORT_DEVICE_NAME, sizeof(SHORT_DEVICE_NAME));
+    ble.gap().setDeviceName((const uint8_t *)DEVICE_NAME);
+
+    // advertise device
+    ble.gap().startAdvertising();
+</code></pre>
+
+<p>We then implement a polling rate of 125Hz for the keyboard. 125Hz is chosen instead of 1000Hz to conserve power.</p>
+<pre><code class="c++">while (true) {
+        ble.waitForEvent();  
+        JoystickControl();  
+        touch_control();
+        // poll every 8ms, or 125Hz
+        wait_ms(8);
+    }
+</code></pre>
+
+<h3 id="inside-initializesecurity">Inside initializeSecurity()</h3>
+<p>It is important to initialize the security properties for the BLE object, this is done to prevent the security issues during the pairing process, these security issues include:
+- Passive eavesdropping
+- MITM (man-in-the-middle) attacks 
+- Identity tracking.</p>
+<pre><code class="c++">void initializeSecurity(BLE &amp;ble)
+{
+    bool enableBonding = true;
+    bool requireMITM = HID_SECURITY_REQUIRE_MITM;
+
+    ble.securityManager().onSecuritySetupInitiated(securitySetupInitiatedCallback);
+    ble.securityManager().onPasskeyDisplay(passkeyDisplayCallback);
+    ble.securityManager().onSecuritySetupCompleted(securitySetupCompletedCallback);
+
+    ble.securityManager().init(enableBonding, requireMITM, HID_SECURITY_IOCAPS);
+}
+</code></pre>
+
+<h3 id="inside-initializehogp">Inside initializeHOGP()</h3>
+<p>Device information and Battery service is required for the device to advertise itself to client device.</p>
+<pre><code class="c++">void initializeHOGP(BLE &amp;ble)
+{
+    static const uint16_t uuid16_list[] =  {GattService::UUID_HUMAN_INTERFACE_DEVICE_SERVICE,
+        GattService::UUID_DEVICE_INFORMATION_SERVICE,
+        GattService::UUID_BATTERY_SERVICE};
+
+    PnPID_t pnpID;
+    pnpID.vendorID_source = 0x2; // from the USB Implementer's Forum
+    pnpID.vendorID = 0x0D28; // NXP
+    pnpID.productID = 0x0204; // CMSIS-DAP (well, it's a keyboard but oh well)
+    pnpID.productVersion = 0x0100; // v1.0
+    HIDDeviceInformationService deviceInfo(ble, &quot;ARM&quot;, &quot;m1&quot;, &quot;abc&quot;, &quot;def&quot;, &quot;ghi&quot;, &quot;jkl&quot;, &amp;pnpID);
+
+    BatteryService batteryInfo(ble, 80);
+
+    ble.gap().accumulateAdvertisingPayload(GapAdvertisingData::BREDR_NOT_SUPPORTED |
+            GapAdvertisingData::LE_GENERAL_DISCOVERABLE);
+    ble.gap().accumulateAdvertisingPayload(GapAdvertisingData::COMPLETE_LIST_16BIT_SERVICE_IDS,
+            (uint8_t *)uuid16_list, sizeof(uuid16_list));
+
+    // see 5.1.2: HID over GATT Specification (pg. 25)
+    ble.gap().setAdvertisingType(GapAdvertisingParams::ADV_CONNECTABLE_UNDIRECTED);
+    // 30ms to 50ms is recommended (5.1.2)
+    ble.gap().setAdvertisingInterval(50);
+}
+</code></pre></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "..",
+                shortcuts = {"search": 83, "next": 78, "help": 191, "previous": 80};
+        </script>
+        <script src="../js/base.js" defer></script>
+        <script src="../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

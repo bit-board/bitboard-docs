@@ -1,0 +1,23 @@
+site_name: bit:board
+theme : 'cosmo'
+nav:
+        - Abstract :
+                - 'Problem Statement' : 'problem_statement.md'
+        - Design :
+                - 'Concept Generation' : 'concept_generation.md'
+                - 'Concept Selection' : 'concept_selection.md'
+                - 'Product Design Specification' : 'PDS.md'
+        - Prototype :
+                - 'Physical Design' : 'physical_design.md'
+                - 'Circuit Diagram' : 'circuit_diagram.md'
+                - 'Test Verification' : 'test_verification.md'
+                - 'mbed Prototype' : 'mbed.md'
+        - Production :
+                - 'Printed Circuit Board (PCB)' : 'printed_circuit_board.md'
+                - 'Bill of Material' : 'bill_of_material.md'
+        - Project Administration :
+                - 'Ethical Consequences / Sustainability' : 'ethical.md'
+                - 'Meeting Minutes' : 'Meeting Minutes.md'
+                - 'Contact the Team' : 'contact.md'
+        - Gallery :
+                - 'Gallery' : 'gallery.md'
